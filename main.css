@@ -1,0 +1,284 @@
+:root {
+    --subtle-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+header {
+    text-align: left;
+    background: white;
+    border-radius: 0.5em;
+}
+
+div.header {
+    padding: 30px;
+}
+
+div.header > h1 {
+    font-size: 50px;
+}
+div.header >p
+{
+    font-style: italic;
+    
+}
+
+ul.post-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+/* NAVBAR */
+nav {
+    overflow: hidden;
+    background-color: yellowgreen;
+    border-radius: 0 0 0.5em 0.5em;
+    display: flex;
+}
+
+nav > a {
+    width: auto;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav > a:hover {
+    background-color: black;
+}
+/* NEWS-LAYOUT*/
+
+.news{
+    display: flex;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+.card_news
+{
+    flex: 1;
+    background-color:white;
+    padding: 2px;
+    margin-top: 10px;
+    margin-right: 3em;
+    border-radius: 1em;
+    box-shadow: var(--subtle-shadow);
+    text-align: center;
+}
+
+.row_news
+{
+ display: flex;
+}
+.card_news > h3
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    
+}
+
+.card_news img
+{
+    border-radius: 60%;
+    width: 80%;
+}
+.card_news img:hover
+{
+    transform: scale(1.25);
+  transition: transform .35s ease
+  
+}
+
+
+/* FLEX LAYOUT */
+.container {
+    display: flex;
+}
+
+.leftcolumn {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.centercolumn {
+    flex: 4;
+}
+
+
+
+/* POST */
+.post-title {
+    font-size: 2em;
+}
+
+.post-age {
+    color: grey;
+}
+
+.login-link {
+    margin-left: auto;
+    background-color: green;
+}
+
+.responsive-img {
+    background-color: #aaa;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0.5em;
+    box-shadow: var(--subtle-shadow);
+}
+#link_destacados
+{
+    text-align: center;
+}
+.post-list
+{
+    text-align: center;
+}
+/* */
+/*DESTACADOS*/
+.card.destacados
+{
+   
+    height: auto;
+   
+    
+}
+.dest-head
+{
+    height: 20px;
+    display: block;
+}
+.dest-body
+{
+    display: flex;
+}
+.post-destacado
+{
+    flex: 1.67;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0.5em;
+    box-shadow: var(--subtle-shadow);
+    text-align: center;
+    padding-top: 2em;
+    margin-left: 1em;
+
+}
+.post-destacado .responsive-img
+{
+    width: auto;
+    height: auto;
+   border-radius: 5%;
+}
+.post-destacado .responsive-img:hover
+{
+    transform: scale(1.25);
+  transition: transform .35s ease
+}
+
+
+/* FOOTER */
+footer {
+    padding: 20px;
+
+    background: #ddd;
+    margin-top: 20px;
+    border-radius: 0.5em;
+}
+.footer-body
+{
+    display: flex;
+}
+.footer-card
+{
+    margin-left: 4em;
+    flex: 1.67;
+    
+}
+.footer-card a
+{
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .rightcolumn {
+        padding-left: 0;
+    }
+    .row_news{
+        flex-direction: column;
+        
+    }
+    .row_news >.card_news
+    {
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    .dest-body
+    {
+        flex-direction: column;
+    }
+    .footer-body
+    {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .leftcolumn
+    {
+        padding-right: 0%;
+    }
+    .row_news{
+        flex-direction: column;
+    }
+    .row_news >.card_news
+    {
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    .login-link {
+        margin: 0;
+    }
+    .dest-body
+    {
+        flex-direction: column;
+    }
+    .footer-body
+    {
+        flex-direction: column;
+    }
+}
